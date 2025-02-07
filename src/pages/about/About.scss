@@ -1,0 +1,33 @@
+.about {
+  .content {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    justify-content: center;
+    min-height: 45vh;
+
+    & p {
+      font-weight: 500;
+    }
+  }
+  .tagline {
+    width: 85%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 7%;
+    margin-bottom: 19px;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content {
+      justify-content: center;
+    }
+  }
+}
