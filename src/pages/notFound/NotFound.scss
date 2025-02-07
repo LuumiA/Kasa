@@ -1,0 +1,29 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 76vh;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+
+  h1 {
+    font-size: 25rem;
+    color: #ff6060;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-link {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: underline;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+}
