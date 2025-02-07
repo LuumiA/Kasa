@@ -1,0 +1,81 @@
+.collapse-element {
+  width: 65%; // Réduit légèrement la largeur des blocs pour un meilleur rendu
+  height: auto; // Permet de s'adapter dynamiquement au contenu
+  font-family: "Montserrat", sans-serif;
+  margin: 1% auto; // Centrage horizontal et espacement vertical entre les blocs
+  transition: all 0.5s ease-in-out; // Animation fluide pour toutes les transitions
+
+  // Titre de l'accordéon (bloc rouge avec le texte)
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Place l'icône à droite
+    background-color: #ff6060; // Couleur rouge pour le titre
+    color: white; // Texte en blanc
+    height: 5.5vh; // Hauteur définie pour le titre
+    border-radius: 10px; // Coins arrondis pour le titre
+    margin: 0; // Enlève les marges par défaut
+    padding: 0 2%; // Ajoute un peu d'espace interne
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+
+    // Icône pour ouvrir/fermer
+    i {
+      position: absolute;
+      right: 2%; // Positionne l'icône à droite
+      font-size: 1.5rem;
+      transition: transform 0.5s ease; // Ajoute une animation à la rotation
+    }
+  }
+
+  // Contenu (texte affiché lors de l'ouverture)
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(246, 246, 246, 0.45); // Fond légèrement transparent
+    border-radius: 10px; // Coins arrondis pour le contenu
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    transform: translateY(-15vh); // Position de départ pour l'animation
+    opacity: 0; // Contenu caché par défaut
+    transition: all 0.5s ease-in-out; // Transition fluide
+  }
+
+  // États actifs (quand l'accordéon est ouvert)
+  &.active {
+    h3 i {
+      transform: rotate(-180deg); // Fait pivoter l'icône vers le haut
+    }
+    p {
+      transform: translateY(0); // Affiche le contenu
+      opacity: 1; // Rend le contenu visible
+    }
+  }
+}
+
+// Responsivité pour les écrans plus petits
+@media (max-width: 768px) {
+  .collapse-element {
+    width: 100%; // Les blocs prennent toute la largeur sur mobile
+    width: 85%;
+    margin-left: 7%;
+    h3 {
+      height: 4vh;
+      font-size: 13px; // Taille de police réduite pour les petits écrans
+      padding-left: 3%; // Ajuste le padding pour un rendu compact
+
+      i {
+        font-size: 3vw; // Taille de l'icône adaptée aux écrans mobiles
+        right: 3%; // Ajuste la position de l'icône
+      }
+    }
+
+    p {
+      font-size: 0.9rem; // Taille de texte réduite pour les petits écrans
+    }
+  }
+}
