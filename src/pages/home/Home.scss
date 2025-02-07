@@ -1,0 +1,38 @@
+.tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 20vh; /* ✅ Ajustement pour un meilleur rendu */
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../../assets/img/BanierreAcceuil.png);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  margin-left: auto; /* ✅ Centre l’élément */
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    height: 15vh; /* ✅ Ajuste la taille sur mobile */
+    background-size: cover;
+  }
+
+  & p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+    width: 80%;
+    text-align: center; /* ✅ Centre bien le texte */
+    line-height: 50px;
+
+    @media (max-width: 768px) {
+      font-size: 18px; /* ✅ Ajuste la taille sur mobile */
+      width: 90%;
+    }
+  }
+}
