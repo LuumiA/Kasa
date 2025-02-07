@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  flex: 1; /* Permet à la section principale de remplir l'espace restant */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* S'assure que la page prend toute la hauteur */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Prend tout l'espace disponible entre header et footer */
+}
