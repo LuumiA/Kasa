@@ -1,0 +1,22 @@
+.pagesDown {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 8rem;
+  text-align: center;
+  margin-top: auto;
+  height: auto;
+
+  @media (max-width: 375px) {
+    padding: 3rem 5rem;
+  }
+
+  & img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      transform: scale(0.8);
+    }
+  }
+}
